@@ -54,44 +54,24 @@ body {
     text-decoration: none;
     font-size: 24px;
     color: #333333;
-    transition: color 0.2s;
     line-height: 36px;
     display: inline-block;
+    transition: text-decoration 0.2s;
 }
 
 .main-nav a:hover {
-    color: #d0021b;
+    color: #333333;
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
+    text-underline-offset: 4px;
 }
 
 .main-nav a.active {
     color: #d0021b;
 }
 
-/* === МЫШКА ДЛЯ "ПРОЕКТЫ" === */
-
-.has-pointer {
-    position: relative;
-    display: inline-block;
-}
-
-.has-pointer a {
-    color: #333333;
-    text-decoration: underline;
-    text-decoration-thickness: 2px;
-    text-underline-offset: 4px; 
-}
-
-.has-pointer::after {
-    content: '';
-    position: absolute;
-    top: 22px; 
-    left: 64px; 
-    width: 21px;
-    height: 22px;
-    background-image: url('./responsive-design/2744EFD6-B878-4DCB-B0D5-526F1B233733/9E1721B2-E123-44D1-BBA7-88E713A6A184@1x.png');
-    background-size: contain;
-    background-repeat: no-repeat;
-    z-index: 10;
+.main-nav a.active:hover {
+    text-decoration: none;
 }
 
 /* === ТЕКСТ СТАТЬИ === */
