@@ -1,8 +1,139 @@
-/* Тут пиши основные стили */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
+body {
+    background-color: #FFFFFF;
+    color: rgba(0, 0, 0, 0.84);
+    font-family: "Lucida Grande", Arial, sans-serif;
+    line-height: 1.5;
+    overflow-x: hidden;
+}
+
+/* === ВЫРАВНИВАНИЕ === */
+
+.logo-wrapper, 
+.nav-container, 
+.article-inner {
+    max-width: 1424px;
+    margin: 0 auto;
+    padding-left: 80px;
+    padding-right: 80px;
+}
+
+/* === ШАПКА === */
+.header {
+    width: 100%;
+    padding-top: 40px;
+}
+
+.logo {
+    width: 97px;
+    height: 64px;
+    margin-bottom: 25px;
+    display: block;
+}
+
+.main-nav {
+    width: 100%;
+    background-color: #faf9f8;
+    border-top: 1px solid #a1a1a1;
+    border-bottom: 1px solid #a1a1a1;
+}
+
+.main-nav ul {
+    list-style: none;
+    display: flex;
+    gap: 35px;
+    padding: 18px 0;
+}
+
+.main-nav a {
+    text-decoration: none;
+    font-size: 24px;
+    color: #333333;
+    transition: color 0.2s;
+    line-height: 36px;
+    display: inline-block;
+}
+
+.main-nav a:hover {
+    color: #d0021b;
+}
+
+.main-nav a.active {
+    color: #d0021b;
+}
+
+/* === МЫШКА ДЛЯ "ПРОЕКТЫ" === */
+
+.has-pointer {
+    position: relative;
+    display: inline-block;
+}
+
+.has-pointer a {
+    color: #333333;
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
+    text-underline-offset: 4px; 
+}
+
+.has-pointer::after {
+    content: '';
+    position: absolute;
+    top: 22px; 
+    left: 64px; 
+    width: 21px;
+    height: 22px;
+    background-image: url('./responsive-design/2744EFD6-B878-4DCB-B0D5-526F1B233733/9E1721B2-E123-44D1-BBA7-88E713A6A184@1x.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    z-index: 10;
+}
+
+/* === ТЕКСТ СТАТЬИ === */
+.article {
+    width: 100%;
+    padding-top: 60px;
+    padding-bottom: 100px;
+}
+
+.article-content {
+    margin-left: 322px; 
+    max-width: 700px;
+}
+
+h1 { font-size: 42px; margin-bottom: 25px; line-height: 1.1; font-weight: bold; }
+h2 { font-size: 34px; margin-top: 50px; margin-bottom: 15px; font-weight: bold; }
+p { font-family: Georgia, serif; font-size: 21px; line-height: 1.6; margin-bottom: 20px; }
+.article-img { display: block; max-width: 100%; height: auto; margin: 40px 0; }
+
+/* === АДАПТИВ === */
+
+@media (max-width: 1424px) {
+    .logo-wrapper, .nav-container, .article-inner {
+        margin-left: 0;
+        padding-left: 30px;
+    }
+}
 
 @media (max-width: 800px) {
-/* Тут пиши стили для мобилки.
-    Стили применятся только когда страничка будет ≤800px шириной
- */
+    .article-content {
+        margin-left: 0;
+        max-width: 100%;
+    }
+    .main-nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+    .main-nav a {
+        font-size: 20px;
+    }
+    h1 { font-size: 28px; line-height: 1.2; }
+    h2 { font-size: 24px; }
+    p { font-size: 18px; line-height: 1.5; }
+
 }
